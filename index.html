@@ -1064,15 +1064,23 @@ html:not(.js) .pstory-viewport{height:auto!important}
     header.classList.toggle('compact',!e[0].isIntersecting);
   }).observe(sentinel);
 
-  /* ---- reveal on scroll (alternating direction + delay via classes) ---- */
-  var els=document.querySelectorAll('.reveal');
-  var io=new IntersectionObserver(function(entries){
-    entries.forEach(function(en){
-      if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
+  /* ---- reveal on scroll (calm fade-up, once per element) ---- */
+  var els=Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  if(reduce||!('IntersectionObserver' in window)){
+    els.forEach(function(el){el.classList.add('in');});
+  }else{
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
+      });
+    },{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){
+      // already scrolled past on load (e.g. refresh mid-page) → show instantly, no animation
+      if(el.getBoundingClientRect().bottom<0){el.classList.add('in');}
+      else{io.observe(el);}
     });
-  },{rootMargin:'0px 0px -8% 0px'});
-  els.forEach(function(el){io.observe(el);});
-  setTimeout(function(){els.forEach(function(el){el.classList.add('in');});},3000);
+    setTimeout(function(){els.forEach(function(el){el.classList.add('in');});},2500);
+  }
 
   /* ---- count-up for significant numbers (layer 3) ---- */
   function countUp(el){
