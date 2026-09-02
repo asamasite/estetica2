@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Услуги и цены — стоматология Estetica, Краснодар</title>
+<meta name="description" content="Услуги и цены стоматологии Estetica в Краснодаре: терапия, ортопедия, хирургия и имплантация, ортодонтия. Итоговую стоимость врач называет после осмотра.">
+<link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff;--bg-soft:#eaf1f4;--ink:#16202e;--body:#5a6472;--muted:#8b97a6;
+  --accent:#0b8ec4;--accent-ink:#0a6f92;--accent-soft:#e2f2f8;--line:#e0e9ed;
+  --shadow:0 18px 40px -18px rgba(13,64,84,.26);--r:13px;--r-sm:8px;
+  --pad:clamp(20px,6vw,96px);--sp:clamp(70px,9vw,120px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--body);font:400 17px/1.65 "Golos Text",Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:"Manrope",Arial,sans-serif;font-weight:800;color:var(--ink);letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(34px,5vw,58px);line-height:1.05}
+h2{font-size:clamp(26px,3.4vw,40px);line-height:1.1}
+h3{font-size:20px;font-weight:700}
+p{margin:0}
+::selection{background:var(--accent);color:#fff}
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--pad)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--accent-ink);font:700 12px/1 "Manrope",sans-serif;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--accent);flex:none}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:15px 24px;border-radius:999px;font:700 14px/1 "Manrope",sans-serif;white-space:nowrap;transition:transform .15s ease,background .2s ease,border-color .2s ease,color .2s ease}
+.btn svg{width:16px;height:16px;flex:none}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 22px rgba(11,142,196,.26)}
+.btn-primary:hover{background:var(--accent-ink)}
+.btn-primary:active{transform:translateY(1px)}
+.btn-ghost{border:1.5px solid var(--line);color:var(--ink);background:#fff}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+.scrollprog{position:fixed;top:0;left:0;height:3px;width:100%;z-index:80;background:var(--accent);transform:scaleX(0);transform-origin:0 50%;transition:transform .08s linear}
+
+.header{position:fixed;z-index:60;inset:3px 0 auto 0;height:78px;display:flex;align-items:center;background:rgba(255,255,255,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.header .wrap{display:flex;align-items:center;justify-content:space-between;width:100%;gap:24px}
+.brand{display:flex;align-items:center;gap:10px;font:800 21px/1 "Manrope",sans-serif;color:var(--ink)}
+.brand-ico{width:32px;height:32px;flex:none;border-radius:8px;box-shadow:0 3px 10px rgba(13,64,84,.18)}
+.brand span{font:600 9px/1 "Manrope",sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.nav{display:flex;gap:28px}
+.nav a{font:500 14px/1 "Golos Text",sans-serif;color:var(--body);position:relative;padding:6px 0}
+.nav a:hover{color:var(--ink)}
+.nav a.active{color:var(--accent-ink);font-weight:600}
+.nav a.active::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--accent);border-radius:2px}
+.header .btn-primary{padding:12px 20px}
+
+.phero{padding:calc(78px + clamp(46px,8vw,86px)) 0 var(--sp);background:linear-gradient(180deg,#e6eef1,#f4f8f9 70%)}
+.phero-in{max-width:640px}
+.phero h1{margin:0 0 18px}
+.phero p{font-size:clamp(16px,1.5vw,19px);line-height:1.6;color:var(--body);max-width:52ch}
+.phero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+
+.section{padding:var(--sp) 0}
+.price-note{color:var(--body);max-width:64ch;margin:12px 0 36px;font-size:14.5px;line-height:1.6}
+.price-groups{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:32px}
+.pg{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px;transition:border-color .25s ease}
+.pg:hover{border-color:var(--accent)}
+.pg h3{margin:0 0 4px}
+.pg .pg-sub{font-size:13px;color:var(--muted);margin-bottom:8px}
+.pg dl{margin:0}
+.pg dl>div{display:flex;justify-content:space-between;gap:20px;align-items:baseline;padding:13px 0;border-top:1px solid var(--line)}
+.pg dt{font-size:14.5px;color:var(--body)}
+.pg dd{margin:0;font:700 15px/1 "Manrope",sans-serif;color:var(--ink);white-space:nowrap}
+
+.embed{background:var(--bg-soft)}
+.embed h2{margin-bottom:12px}
+.embed p{color:var(--body);max-width:54ch;margin-bottom:26px}
+.embed-frame{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);height:clamp(380px,54vw,560px);border:1px solid var(--line)}
+.embed-frame iframe{width:100%;height:100%;border:0}
+.embed-more{margin-top:26px}
+
+.cta{background:var(--accent);color:#fff}
+.cta .wrap{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+.cta h2{color:#fff}
+.cta p{color:#dbe6ff;margin-top:8px}
+.cta .btn-ghost{background:transparent;border-color:rgba(255,255,255,.5);color:#fff}
+.cta .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.12);color:#fff}
+.cta .btn-primary{background:#fff;color:var(--accent-ink);box-shadow:none}
+.cta .btn-primary:hover{background:#eef2ff}
+
+.footer{background:var(--bg-soft);border-top:1px solid var(--line);padding:40px 0}
+.footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.footer p{font-size:12px;color:var(--muted);max-width:52ch}
+.footer-links{display:flex;gap:20px;font:600 13px/1 "Manrope",sans-serif;color:var(--body)}
+.footer-links a:hover{color:var(--accent)}
+
+@media(max-width:900px){
+  .nav{display:none}
+  .price-groups{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="scrollprog" id="scrollprog"></div>
+
+<header class="header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img class="brand-ico" src="public/favicon.svg" alt="">ESTETICA<span>стоматология</span></a>
+    <nav class="nav">
+      <a href="index.html#services">Услуги</a>
+      <a href="prices.html" class="active">Цены</a>
+      <a href="index.html#doctors">Врачи</a>
+      <a href="index.html#reviews">Отзывы</a>
+      <a href="index.html#faq">Вопросы</a>
+      <a href="index.html#gallery">Клиника</a>
+      <a href="index.html#contacts">Контакты</a>
+    </nav>
+    <a class="btn btn-primary" href="tel:+79182311999">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 3.5a5 5 0 0 1 5 5M14.5 7a2 2 0 0 1 2 2M8 5l2 4-2 1.5a11 11 0 0 0 5.5 5.5L15 19l4 2a2 2 0 0 1-1 2.5A16.5 16.5 0 0 1 2 8 2 2 0 0 1 4.5 6z"/></svg>
+      +7 918 231-19-99
+    </a>
+  </div>
+</header>
+
+<section class="phero">
+  <div class="wrap"><div class="phero-in">
+    <span class="eyebrow">Краснодар · ул. Октябрьская, 21</span>
+    <h1>Услуги и цены</h1>
+    <p>Ниже — ориентировочные цены на основные процедуры. Лечение начинается с понятного плана: врач проводит осмотр, при необходимости назначает диагностику и объясняет варианты. Итоговую стоимость называет после осмотра, без навязанных процедур.</p>
+    <div class="phero-cta">
+      <a class="btn btn-primary" href="tel:+79182311999">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 3.5a5 5 0 0 1 5 5M14.5 7a2 2 0 0 1 2 2M8 5l2 4-2 1.5a11 11 0 0 0 5.5 5.5L15 19l4 2a2 2 0 0 1-1 2.5A16.5 16.5 0 0 1 2 8 2 2 0 0 1 4.5 6z"/></svg>
+        Записаться на приём
+      </a>
+      <a class="btn btn-ghost" href="https://yandex.ru/maps/org/estetika/1059527615/" target="_blank" rel="noopener">
+        Открыть карточку на Яндекс Картах
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div></div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Направления и цены</h2>
+    <p class="price-note">Цены указаны в рублях и носят справочный характер; окончательная стоимость зависит от клинической ситуации и определяется после осмотра.</p>
+    <div class="price-groups">
+      <article class="pg">
+        <h3>Терапия</h3>
+        <p class="pg-sub">Лечение кариеса и каналов, реставрация, гигиена</p>
+        <dl>
+          <div><dt>Проведение анестезии</dt><dd>550 ₽</dd></div>
+          <div><dt>Фторирование дентина</dt><dd>200 ₽</dd></div>
+          <div><dt>Ультразвуковая гигиена полости рта + AirFlow</dt><dd>5 000 ₽</dd></div>
+          <div><dt>Ультразвуковая гигиена полости рта (сегмент)</dt><dd>2 500 ₽</dd></div>
+          <div><dt>Герметизация фиссур</dt><dd>3 000 ₽</dd></div>
+          <div><dt>Реставрация поверхности зуба</dt><dd>6 500 ₽</dd></div>
+          <div><dt>Реставрация глубокого кариеса</dt><dd>6 500 ₽</dd></div>
+          <div><dt>Закрытие клиновидного дефекта</dt><dd>6 500 ₽</dd></div>
+          <div><dt>Реставрация фронтального зуба</dt><dd>6 500 ₽</dd></div>
+          <div><dt>Коррекция реставрации</dt><dd>2 000 ₽</dd></div>
+          <div><dt>Механическая и антисептическая обработка, пломбирование каналов</dt><dd>по кол-ву каналов</dd></div>
+          <div><dt>Временное пломбирование канала препаратами кальция</dt><dd>1 500 ₽</dd></div>
+          <div><dt>Наложение девитализирующей пасты</dt><dd>2 000 ₽</dd></div>
+          <div><dt>Распломбировка канала (гуттаперча)</dt><dd>1 100 ₽</dd></div>
+          <div><dt>Распломбировка канала (цемент)</dt><dd>1 500 ₽</dd></div>
+          <div><dt>Извлечение инородного тела из канала</dt><dd>от 1 000 ₽</dd></div>
+          <div><dt>Восстановление зуба после лечения каналов</dt><dd>6 500 ₽</dd></div>
+          <div><dt>Инъекции препаратов при заболеваниях пародонта</dt><dd>550 ₽</dd></div>
+        </dl>
+      </article>
+      <article class="pg">
+        <h3>Ортопедия</h3>
+        <p class="pg-sub">Коронки, виниры, съёмное и бюгельное протезирование</p>
+        <dl>
+          <div><dt>Безметалловая керамика E-max, диоксид циркония</dt><dd>23 000 ₽</dd></div>
+          <div><dt>Металлокерамическая коронка Duceram (Германия)</dt><dd>15 000 ₽</dd></div>
+          <div><dt>Цельнолитая коронка из КХС</dt><dd>9 000 ₽</dd></div>
+          <div><dt>Винир E-max</dt><dd>25 000 ₽</dd></div>
+          <div><dt>Пластмассовая коронка (двуслойная)</dt><dd>5 500 ₽</dd></div>
+          <div><dt>Временная пластмассовая коронка</dt><dd>700 ₽</dd></div>
+          <div><dt>Вкладка культевая литая</dt><dd>6 500 ₽</dd></div>
+          <div><dt>Слепки А-силиконовые двуслойные</dt><dd>700 ₽</dd></div>
+          <div><dt>Слепки С-силиконовые двуслойные</dt><dd>500 ₽</dd></div>
+          <div><dt>Снятие штампованной коронки</dt><dd>1 100 ₽</dd></div>
+          <div><dt>Снятие металлокерамической коронки</dt><dd>1 100 ₽</dd></div>
+          <div><dt>Бюгельный протез кламмерный</dt><dd>35 000 ₽</dd></div>
+          <div><dt>Бюгельный протез на микрозамках</dt><dd>от 35 000 ₽</dd></div>
+          <div><dt>Съёмный пластиночный протез</dt><dd>33 000 ₽</dd></div>
+          <div><dt>Съёмный пластиночный протез с армировкой</dt><dd>38 000 ₽</dd></div>
+          <div><dt>Съёмный протез Virtex с мягкой прокладкой</dt><dd>35 000 ₽</dd></div>
+          <div><dt>Съёмный протез Valplast</dt><dd>35 000 ₽</dd></div>
+          <div><dt>Съёмный протез Valplast частичный</dt><dd>25 000 ₽</dd></div>
+          <div><dt>Иммедиат-протез частичный</dt><dd>10 000 ₽</dd></div>
+          <div><dt>Перебазировка съёмного протеза</dt><dd>8 000 ₽</dd></div>
+          <div><dt>Починка съёмного протеза</dt><dd>3 500 ₽</dd></div>
+          <div><dt>Армировка съёмного протеза</dt><dd>8 000 ₽</dd></div>
+          <div><dt>Изготовление индивидуальной ложки</dt><dd>1 100 ₽</dd></div>
+        </dl>
+      </article>
+      <article class="pg">
+        <h3>Хирургия и имплантация</h3>
+        <p class="pg-sub">Удаление зубов, имплантация Osstem, синус-лифтинг</p>
+        <dl>
+          <div><dt>Консультация имплантолога</dt><dd>500 ₽</dd></div>
+          <div><dt>Удаление временного зуба</dt><dd>1 500 ₽</dd></div>
+          <div><dt>Удаление подвижного зуба</dt><dd>1 000 ₽</dd></div>
+          <div><dt>Удаление корней зуба</dt><dd>3 500 ₽</dd></div>
+          <div><dt>Удаление постоянного зуба</dt><dd>5 000 ₽</dd></div>
+          <div><dt>Удаление зуба мудрости</dt><dd>6 000 ₽</dd></div>
+          <div><dt>Сложное удаление (с гемисекцией)</dt><dd>6 000 ₽</dd></div>
+          <div><dt>Вскрытие периостального абсцесса</dt><dd>2 000 ₽</dd></div>
+          <div><dt>Иссечение экзостозов (1 сегмент)</dt><dd>1 100 ₽</dd></div>
+          <div><dt>Наложение швов</dt><dd>1 000 ₽</dd></div>
+          <div><dt>Имплантат Osstem</dt><dd>33 000 ₽</dd></div>
+          <div><dt>Имплантат Osstem (от 3 шт.)</dt><dd>30 000 ₽</dd></div>
+          <div><dt>Хирургический шаблон (1 отверстие)</dt><dd>5 000 ₽</dd></div>
+          <div><dt>Установка формирователя десны</dt><dd>3 000 ₽</dd></div>
+          <div><dt>Коронка МК на имплантате Osstem + абатмент</dt><dd>27 500 ₽</dd></div>
+          <div><dt>Коронка на оксид-циркониевом каркасе (имплантат)</dt><dd>30 000 ₽</dd></div>
+          <div><dt>Удаление имплантата</dt><dd>3 000 ₽</dd></div>
+          <div><dt>Закрытый синус-лифтинг (без стоимости материала)</dt><dd>22 000 ₽</dd></div>
+          <div><dt>Открытый синус-лифтинг</dt><dd>45 000 ₽</dd></div>
+          <div><dt>Расщепление альвеолярного отростка</dt><dd>21 000 ₽</dd></div>
+          <div><dt>Мембрана резорбируемая Bio-Gide</dt><dd>13 000 ₽</dd></div>
+          <div><dt>Биопластическая мембрана</dt><dd>7 000 ₽</dd></div>
+        </dl>
+      </article>
+      <article class="pg">
+        <h3>Ортодонтия</h3>
+        <p class="pg-sub">Коррекция положения зубов и прикуса</p>
+        <dl>
+          <div><dt>Консультация ортодонта</dt><dd>по записи</dd></div>
+          <div><dt>План коррекции прикуса</dt><dd>после осмотра и диагностики</dd></div>
+        </dl>
+        <p class="pg-sub" style="margin-top:14px">Метод и объём коррекции врач определяет индивидуально после осмотра и необходимых исследований.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section embed">
+  <div class="wrap">
+    <h2>Карточка клиники на Яндекс Картах</h2>
+    <p>Клиника с ценами, отзывами и фото. Рейтинг 5,0, «Хорошее место» 2026.</p>
+    <div class="embed-frame">
+      <iframe title="Стоматология Estetica на Яндекс Картах" loading="lazy" src="https://yandex.ru/map-widget/v1/?ll=38.961826%2C45.014519&mode=search&oid=1059527615&ol=biz&z=17" allowfullscreen></iframe>
+    </div>
+    <div class="embed-more">
+      <a class="btn btn-primary" href="https://yandex.ru/maps/org/estetika/1059527615/" target="_blank" rel="noopener">
+        Открыть на Яндекс Картах
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="wrap">
+    <div>
+      <h2>Запланируем ваш визит</h2>
+      <p>Краснодар, ул. Октябрьская, 21 · ежедневно 09:00–19:00</p>
+    </div>
+    <div class="phero-cta">
+      <a class="btn btn-primary" href="tel:+79182311999">Позвонить</a>
+      <a class="btn btn-ghost" href="https://vk.com/estetica.dent" target="_blank" rel="noopener">ВКонтакте</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img class="brand-ico" src="public/favicon.svg" alt="">ESTETICA<span>стоматология</span></a>
+    <p>Краснодар, ул. Октябрьская, 21. На сайте — справочная информация. Об услугах и условиях расскажем при записи. ИНН 230602476810.</p>
+    <div class="footer-links">
+      <a href="https://vk.com/estetica.dent" target="_blank" rel="noopener">ВКонтакте</a>
+      <a href="https://yandex.ru/maps/org/estetika/1059527615" target="_blank" rel="noopener">Яндекс Карты</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var sp=document.getElementById('scrollprog'),t=false;
+  function u(){var d=document.documentElement,m=d.scrollHeight-d.clientHeight;sp.style.transform='scaleX('+(m>0?Math.min(d.scrollTop/m,1):0)+')';t=false;}
+  addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(u);}},{passive:true});u();
+})();
+</script>
+</body>
+</html>
